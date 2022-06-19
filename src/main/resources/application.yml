@@ -1,0 +1,28 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:mysql://124.70.17.73:3306/2019214225?serverTimezone=Asia/Shanghai
+    username: 2019214225
+    password: 2019214225
+    hikari:
+      minimum-idle: 3
+      maximum-pool-size: 10
+      max-lifetime: 30000
+      connection-test-query: "SELECT 1"
+  jackson:
+    default-property-inclusion: non_null
+
+
+logging:
+  level:
+    sql: debug
+    com:
+      bandit: debug
+  pattern:
+    console: '%-5level %C.%M[%line] - %msg%n'
+
+
+my:
+  secretKey: R28K42ZEJ8LWRHU5
